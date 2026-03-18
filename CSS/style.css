@@ -1,3 +1,9 @@
+/*
+ * Legacy stylesheet from the original template.
+ * Current UI is primarily Tailwind-driven in index.html.
+ * Keep this file only for backward compatibility while migration completes.
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 :root{
     --bg-black-900:#f2f2fc;
@@ -159,6 +165,15 @@ ul{
 .aside .logo a span{
     font-family: 'Clicker Script', cursive;
     font-size: 40px;
+}
+
+.aside .logo .brand-tag{
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    color: var(--text-black-700);
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .aside .logo a::before{
@@ -586,4 +601,178 @@ h3.my-profession{
     font-size: 16px;
     color: var(--text-black-700);
     line-height: 25px;
+}
+
+/* portfolio */
+.portfolio .portfolio-item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item .portfolio-item-inner{
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 25px;
+    height: 100%;
+}
+
+.portfolio .portfolio-item .portfolio-item-inner h4{
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--text-black-900);
+}
+
+.portfolio .portfolio-item .portfolio-item-inner p{
+    font-size: 15px;
+    color: var(--text-black-700);
+    line-height: 24px;
+}
+
+/* contact */
+.contact .contact-info-item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact .contact-info-item h4{
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: var(--text-black-900);
+}
+
+.contact .contact-info-item p{
+    font-size: 15px;
+    color: var(--text-black-700);
+    word-break: break-word;
+}
+
+.contact .contact-form{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.contact .contact-form .col-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.contact .contact-form .col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.contact .contact-form .form-item{
+    margin-bottom: 20px;
+}
+
+.contact .contact-form .form-control{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--text-black-700);
+}
+
+.contact .contact-form textarea.form-control{
+    height: 140px;
+    resize: vertical;
+    padding-top: 14px;
+}
+
+/* footer */
+.portfolio-footer{
+    min-height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid var(--bg-black-50);
+}
+
+.portfolio-footer .footer-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.portfolio-footer .footer-content p{
+    color: var(--text-black-700);
+}
+
+.portfolio-footer .footer-content .trademark-line{
+    margin-top: 8px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--skin-color);
+    font-weight: 600;
+}
+
+/* responsive */
+@media (max-width: 1199px){
+    .aside{
+        left: -270px;
+    }
+
+    .aside.open{
+        left: 0;
+    }
+
+    .aside .nav-toggler{
+        display: flex;
+        left: 30px;
+    }
+
+    .main-content{
+        padding-left: 0;
+    }
+
+    .home .home-info,
+    .home .home-img,
+    .about .about-content .personal-info,
+    .about .about-content .skills,
+    .about .about-content .education,
+    .about .about-content .experience,
+    .services .service-item,
+    .portfolio .portfolio-item,
+    .contact .contact-info-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px){
+    .section{
+        padding: 0 20px;
+    }
+
+    .home .home-info,
+    .home .home-img,
+    .about .about-content .personal-info,
+    .about .about-content .skills,
+    .about .about-content .education,
+    .about .about-content .experience,
+    .services .service-item,
+    .portfolio .portfolio-item,
+    .contact .contact-info-item,
+    .contact .contact-form .col-6,
+    .contact .contact-form .col-12{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home .home-img{
+        margin-top: 35px;
+    }
+
+    .home .home-img img{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
 }

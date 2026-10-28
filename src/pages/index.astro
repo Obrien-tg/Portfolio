@@ -3,27 +3,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Obrien TG | Software Developer"
-  description="I'm Obrien, a software developer and student of life, building practical digital tools to help people turn ideas into reality."
+  title="Obrien TG | Websites, Apps & Digital Tools"
+  description="I help people and small businesses turn ideas into useful websites, apps, and digital tools — with clear communication and thoughtful work."
 >
   <section class="grid min-h-[65vh] items-center gap-12 md:grid-cols-[1.2fr_.8fr]">
     <div>
-      <p class="mb-4 max-w-2xl text-sm leading-7 text-slate-400">I build websites, apps, and digital tools for people who have an idea and need it made real — cleanly, honestly, and built to last.</p>
-      <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-ice/30 bg-ice/5 px-3 py-1 text-xs text-ice/90">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-[.2em] text-ice">Polaris · A direction to build toward</p>
+      <h1 class="font-display text-5xl font-semibold leading-tight text-white sm:text-7xl">Good ideas deserve to become real things.</h1>
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">I'm Obrien. I build websites, apps, and digital tools for people with something they want to bring into the world — whether that's a small business finding its feet online or an idea ready to take its first step.</p>
+      <p class="mt-4 max-w-2xl leading-7 text-slate-400">I like asking questions, understanding the problem, and making the moving parts fit together. No big promises for the sake of it; just clear communication, careful work, and something useful at the end.</p>
+      <p class="mt-6 inline-flex items-center gap-2 rounded-full border border-ice/30 bg-ice/5 px-3 py-1 text-xs text-ice/90">
         <span class="h-1.5 w-1.5 rounded-full bg-ice" aria-hidden="true"></span>
-        Open to junior roles and freelance builds
+        Open to freelance projects and collaborations
       </p>
-      <h1 class="font-display text-5xl font-semibold leading-tight text-white sm:text-7xl">Software that ships, scales, and stays reliable.</h1>
-      <p class="mt-4 text-sm italic text-slate-400">A wave in the ocean.</p>
-      <p class="mt-2 text-sm text-slate-400">Curious by nature. Building for freedom.</p>
+      <p class="mt-5 text-sm italic text-slate-400">A wave in the ocean.</p>
+      <p class="mt-2 text-sm text-slate-300">Curious by nature. Building for freedom.</p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a class="rounded-lg bg-ice px-5 py-3 font-semibold text-ink hover:bg-white" href="/work/">See projects</a>
-        <a class="rounded-lg border border-slate-600 px-5 py-3 font-semibold text-white hover:border-ice" href="/contact/">Start a conversation</a>
+        <a class="rounded-lg bg-ice px-5 py-3 font-semibold text-ink hover:bg-white" href="/work/">Explore my work</a>
+        <a class="rounded-lg border border-slate-600 px-5 py-3 font-semibold text-white hover:border-ice" href="/contact/">Tell me what you're building</a>
       </div>
       <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-slate-800 pt-4 text-xs text-slate-400">
-        <span>Real projects</span><span class="text-slate-600">·</span><span>Live links where they exist</span><span class="text-slate-600">·</span><span>No invented metrics</span>
+        <span>Real projects</span><span class="text-slate-600" aria-hidden="true">·</span><span>Live demos where available</span><span class="text-slate-600" aria-hidden="true">·</span><span>Honest about what I've built</span>
       </div>
     </div>
-    <img src="/images/hero.webp" alt="Portrait of Obrien Takunda Gwanyanya" class="mx-auto w-full max-w-sm rounded-3xl border border-slate-700 shadow-2xl" />
+    <img src="/images/hero.webp" alt="Portrait of Obrien Takunda Gwanyanya" class="mx-auto w-full max-w-sm rounded-3xl border border-slate-700 shadow-2xl" loading="eager" fetchpriority="high" />
+  </section>
+  <section class="mt-16 grid gap-6 border-t border-slate-800 pt-10 sm:grid-cols-3">
+    <div><h2 class="font-display text-lg font-semibold text-white">Start with the problem</h2><p class="mt-2 text-sm leading-7 text-slate-400">We get clear on what you need before deciding what to build.</p></div>
+    <div><h2 class="font-display text-lg font-semibold text-white">Make it useful</h2><p class="mt-2 text-sm leading-7 text-slate-400">The goal is a site or tool that serves real people, not just a nice screenshot.</p></div>
+    <div><h2 class="font-display text-lg font-semibold text-white">Keep moving forward</h2><p class="mt-2 text-sm leading-7 text-slate-400">Thoughtful choices, honest updates, and room to improve as your needs change.</p></div>
   </section>
 </BaseLayout>

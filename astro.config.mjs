@@ -1,4 +1,8 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
-export default defineConfig({ integrations: [tailwind()], output: 'static' });
+export default defineConfig({
+  site: 'https://obrien-tg.netlify.app',
+  integrations: [tailwind()],
+  output: 'static',
+});

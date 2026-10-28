@@ -1,4 +1,29 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'; import SectionIntro from '../components/SectionIntro.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionIntro from '../components/SectionIntro.astro';
 ---
-<BaseLayout title="About | Obrien TG" description="About Obrien TG, an IT Software Development student based in Pretoria."><SectionIntro eyebrow="The person behind the work" title="About me" intro="I am currently studying toward a Diploma in IT Software Development at IIE Varsity College in Pretoria."/><div class="mt-12 grid gap-10 md:grid-cols-2"><div class="space-y-5 leading-8 text-slate-300"><p>My focus is building practical applications with JavaScript, Java, and Python, and improving release confidence through automated testing, CI/CD, and containerized deployment.</p><p>I value evidence over noise, progress over perfection, and systems that serve real people. This site intentionally avoids details that cannot be verified.</p></div><div class="rounded-2xl border border-slate-800 bg-panel/70 p-6"><h2 class="font-display text-xl font-semibold text-white">Current focus</h2><ul class="mt-5 space-y-3 text-slate-300"><li>JavaScript and frontend development</li><li>Python and Java backend fundamentals</li><li>Docker and Linux workflow automation</li><li>CI/CD and deployment pipelines</li><li>API design and integration</li></ul></div></div></BaseLayout>
+
+<BaseLayout title="About | Obrien TG" description="About Obrien TG, an IT Software Development student based in Pretoria.">
+  <SectionIntro eyebrow="The person behind the work" title="About me" intro="I am currently studying toward a Diploma in IT Software Development at IIE Varsity College in Pretoria." />
+  <div class="mt-12 grid gap-10 md:grid-cols-2">
+    <div class="space-y-5 leading-8 text-slate-300">
+      <p>My focus is building practical applications with JavaScript, Java, and Python, and improving release confidence through automated testing, CI/CD, and containerized deployment.</p>
+      <p>I value evidence over noise, progress over perfection, and systems that serve real people. This site intentionally avoids details that cannot be verified.</p>
+    </div>
+    <div class="rounded-2xl border border-slate-800 bg-panel/70 p-6">
+      <h2 class="font-display text-xl font-semibold text-white">Current focus</h2>
+      <ul class="mt-5 space-y-3 text-slate-300">
+        <li>JavaScript and frontend development</li><li>Python and Java backend fundamentals</li><li>Docker and Linux workflow automation</li><li>CI/CD and deployment pipelines</li><li>API design and integration</li>
+      </ul>
+    </div>
+  </div>
+  <section class="mt-16 border-t border-slate-800 pt-8">
+    <p class="text-lg italic text-ice/80">A wave in the ocean.</p>
+    <p class="mt-2 max-w-prose text-sm text-slate-400">One small part of something larger. I try to do my piece well and leave the work clearer than I found it.</p>
+    <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-300">
+      <a class="hover:text-ice" href="mailto:gwanyanyaobrien55@gmail.com">Email</a>
+      <a class="hover:text-ice" href="https://github.com/Obrien-tg" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="hover:text-ice" href="https://x.com/Obrien_tg" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+  </section>
+</BaseLayout>

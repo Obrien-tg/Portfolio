@@ -3,27 +3,40 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionIntro from '../components/SectionIntro.astro';
 ---
 
-<BaseLayout title="About | Obrien TG" description="About Obrien TG, an IT Software Development student based in Pretoria.">
-  <SectionIntro eyebrow="The person behind the work" title="About me" intro="I am currently studying toward a Diploma in IT Software Development at IIE Varsity College in Pretoria." />
-  <div class="mt-12 grid gap-10 md:grid-cols-2">
+<BaseLayout title="About | Obrien TG" description="Meet Obrien: a curious developer who enjoys understanding how things fit together and turning ideas into useful digital tools.">
+  <SectionIntro eyebrow="The person behind the work" title="Curiosity is usually where I start." intro="I'm a student of life, a philosopher, a son, a brother, a friend, a neighbour. And right now, I'm a developer." />
+  <div class="mt-10 grid gap-10 md:grid-cols-[1.2fr_.8fr]">
     <div class="space-y-5 leading-8 text-slate-300">
-      <p>My focus is building practical applications with JavaScript, Java, and Python, and improving release confidence through automated testing, CI/CD, and containerized deployment.</p>
-      <p>I value evidence over noise, progress over perfection, and systems that serve real people. This site intentionally avoids details that cannot be verified.</p>
+      <p>I'm building projects that turn what I learn into things that work — because I want to help you turn your ideas into reality, too.</p>
+      <p>I like understanding how things fit together: from what a person sees on a screen to the logic and systems working behind it. My projects have taken me across websites, web applications, and Android development. Each one gives me another reason to ask better questions, explore unfamiliar ideas, and try something new.</p>
+      <p>I'm still learning, and that's part of the point. I'd rather understand why something works than simply make it work once. I value clear thinking, honest feedback, and leaving things a little better than I found them.</p>
     </div>
-    <div class="rounded-2xl border border-slate-800 bg-panel/70 p-6">
-      <h2 class="font-display text-xl font-semibold text-white">Current focus</h2>
+    <aside class="h-fit rounded-2xl border border-slate-800 bg-panel/70 p-6">
+      <p class="text-xs font-semibold uppercase tracking-[.2em] text-ice">What I'm learning through</p>
+      <h2 class="mt-3 font-display text-xl font-semibold text-white">Curiosity, put to work</h2>
       <ul class="mt-5 space-y-3 text-slate-300">
-        <li>JavaScript and frontend development</li><li>Python and Java backend fundamentals</li><li>Docker and Linux workflow automation</li><li>CI/CD and deployment pipelines</li><li>API design and integration</li>
+        <li>Websites and frontend development</li>
+        <li>Web applications and API integration</li>
+        <li>Python and Java fundamentals</li>
+        <li>Android development with Kotlin</li>
+        <li>Linux, Docker, testing, and deployment workflows</li>
       </ul>
-    </div>
+      <p class="mt-5 text-sm leading-6 text-slate-400">These are areas I'm actively exploring and building with — not a claim to know everything about them.</p>
+    </aside>
   </div>
-  <section class="mt-16 border-t border-slate-800 pt-8">
-    <p class="text-lg italic text-ice/80">A wave in the ocean.</p>
-    <p class="mt-2 max-w-prose text-sm text-slate-400">One small part of something larger. I try to do my piece well and leave the work clearer than I found it.</p>
-    <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-300">
-      <a class="hover:text-ice" href="mailto:gwanyanyaobrien55@gmail.com">Email</a>
-      <a class="hover:text-ice" href="https://github.com/Obrien-tg" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="hover:text-ice" href="https://x.com/Obrien_tg" target="_blank" rel="noopener noreferrer">X</a>
+  <section class="mt-16 border-t border-slate-800 pt-10">
+    <p class="text-xs font-semibold uppercase tracking-[.2em] text-ice">A personal philosophy</p>
+    <h2 class="mt-3 font-display text-3xl font-semibold text-white">A wave in the ocean.</h2>
+    <p class="mt-4 max-w-2xl leading-8 text-slate-300">I'm one small part of something much bigger. That thought keeps me curious, reminds me there's always more to learn, and helps me focus on doing my part well.</p>
+    <blockquote class="mt-8 max-w-3xl border-l-2 border-ice/60 pl-5">
+      <p class="font-display text-xl leading-8 text-white">“The philosophers have only interpreted the world, in various ways; the point is to change it.”</p>
+      <footer class="mt-3 text-sm text-slate-400">— Karl Marx, <cite>Theses on Feuerbach</cite> (1845)</footer>
+    </blockquote>
+    <p class="mt-8 font-display text-lg font-semibold text-ice">Curious by nature. Building for freedom.</p>
+    <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-300">
+      <a class="hover:text-ice" href="mailto:gwanyanyaobrien55@gmail.com">Email me</a>
+      <a class="hover:text-ice" href="https://github.com/Obrien-tg" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <a class="hover:text-ice" href="https://x.com/Obrien_tg" target="_blank" rel="noopener noreferrer">X <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 </BaseLayout>

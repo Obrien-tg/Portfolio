@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page not found | Obrien TG"
+  description="This page does not exist. Return to the home page or explore the work."
+>
+  <section class="mx-auto max-w-3xl px-5 py-24 text-center">
+    <p class="text-xs uppercase tracking-widest text-ice">404</p>
+    <h1 class="mt-4 font-display text-4xl font-semibold text-white sm:text-5xl">
+      This page is not here.
+    </h1>
+    <p class="mx-auto mt-6 max-w-prose leading-7 text-slate-300">
+      The link might be old, mistyped, or the page may have moved. Nothing is broken — you just landed on a page that does not exist.
+    </p>
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <a class="inline-flex rounded-lg bg-ice px-5 py-2.5 font-semibold text-ink hover:bg-white" href="/">Back home</a>
+      <a class="inline-flex rounded-lg border border-slate-600 px-5 py-2.5 font-semibold text-white hover:border-ice" href="/work/">See the work</a>
+    </div>
+  </section>
+</BaseLayout>

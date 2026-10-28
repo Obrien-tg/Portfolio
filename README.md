@@ -1,4 +1,4 @@
-# Obrien TG Personal Page
+# Polaris — Obrien TG portfolio
 
 Personal page and portfolio for Obrien Takunda Gwanyanya.
 
@@ -14,41 +14,39 @@ This site presents:
 
 ## Tech Stack
 
-- HTML5
-- Tailwind CSS (CDN)
-- Vanilla JavaScript
-- Font Awesome (CDN)
+- Astro + TypeScript
+- Tailwind CSS
+- Netlify Forms
 
 ## Project Structure
 
-- `index.html`: Main single-page app structure and content sections
-- `JS/script.js`: Section routing, active navigation state, mobile menu behavior
-- `CSS/style.css`: Legacy stylesheet retained for compatibility
-- `CSS/skins/color-1.css`: Legacy skin variable file
-- `Images/`: Static assets
+- `src/pages/`: Static Astro routes for the five portfolio pages
+- `src/components/`: Shared navigation, layout, project, service, and content components
+- `src/data.ts`: Typed, auditable project and service content
+- `public/images/`: Static assets
 
-## Local Run
+## Local development
 
 From the project root:
 
 ```bash
-busybox httpd -f -p 4173 -h .
+npm install
+npm run dev
 ```
 
-Then open:
+Astro prints the local URL (normally `http://localhost:4321`).
 
-- `http://localhost:4173`
+## Deployment
+
+The included `netlify.toml` configures Netlify to run `npm run build` and publish
+the generated `dist` directory. Connect the repository in Netlify and deploy;
+the contact form is detected automatically through Netlify Forms.
+
+Run `npm run check` and `npm run build` before publishing.
 
 If port `4173` is already in use, the site may already be running.
 
-## Editing Notes
+## Routes
 
-- The page behaves like a lightweight SPA: only one `.section` is visible at a time.
-- Navigation updates URL hash for deep links and browser back/forward support.
-- Keep comments concise and focused on non-obvious behavior.
-
-## Roadmap (Short)
-
-- Add project detail pages for each featured case study
-- Replace `mailto:` form flow with a service-backed endpoint
-- Add richer social share metadata and OG image
+`/`, `/about/`, `/work/`, `/services/`, and `/contact/` are static, independently
+routable pages with shared accessible layout and navigation.

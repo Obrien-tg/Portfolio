@@ -1,0 +1,4 @@
+---
+const { project } = Astro.props;
+---
+<article class="flex flex-col rounded-2xl border border-slate-800 bg-panel/70 p-6"><p class="text-xs uppercase tracking-widest text-ice">Verified project</p><h2 class="mt-4 font-display text-2xl font-semibold text-white">{project.name}</h2><p class="mt-3 flex-1 leading-7 text-slate-300">{project.description}</p><div class="mt-6 flex flex-wrap gap-3"><a class="inline-flex w-fit rounded-lg bg-ice px-4 py-2 font-semibold text-ink hover:bg-white" href={project.url} target="_blank" rel="noopener noreferrer">View code <span aria-hidden="true">↗</span></a>{project.liveUrl && <a class="inline-flex w-fit rounded-lg border border-slate-600 px-4 py-2 font-semibold text-white hover:border-ice" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a>}</div></article>

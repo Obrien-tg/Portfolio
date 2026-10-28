@@ -1,4 +1,17 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'; import SectionIntro from '../components/SectionIntro.astro'; import ProjectCard from '../components/ProjectCard.astro'; import { projects } from '../data';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionIntro from '../components/SectionIntro.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data';
 ---
-<BaseLayout title="Work | Obrien TG" description="Verified repository projects by Obrien TG."><SectionIntro eyebrow="Selected work" title="Proof over promises" intro="A small selection of projects with links to their source repositories. Where outcomes are not documented, I leave them unclaimed."/><div class="mt-12 grid gap-5 sm:grid-cols-2">{projects.map((project) => <ProjectCard project={project} />)}</div><a class="mt-8 inline-block text-ice underline underline-offset-4 hover:text-white" href="https://github.com/Obrien-tg" target="_blank" rel="noopener noreferrer">Browse the full GitHub profile ↗</a></BaseLayout>
+<BaseLayout title="Selected Work | Obrien TG" description="Explore websites, web applications, and Android projects built by Obrien TG. See the work, source code, and live demos where available.">
+  <SectionIntro eyebrow="Selected work" title="Ideas, made tangible." intro="Every project starts somewhere: a business that needs a clearer online home, a process that could work better, or a question I want to explore. Here's a selection of things I've been building. Where a live version is available, take a look; where it isn't, the source code is there to explore."/>
+  <div class="mt-6 max-w-2xl text-sm leading-7 text-slate-400">I'm still growing as a developer, so I won't pretend every project is a finished product or attach numbers I can't support. I'd rather show you what exists, what I worked on, and what I'm learning along the way.</div>
+  <div class="mt-10 grid gap-5 sm:grid-cols-2">{projects.map((project) => <ProjectCard project={project} />)}</div>
+  <div class="mt-12 rounded-2xl border border-slate-800 bg-panel/70 p-6 sm:p-8">
+    <h2 class="font-display text-xl font-semibold text-white">Have something in mind?</h2>
+    <p class="mt-2 max-w-2xl leading-7 text-slate-300">If one of these projects gives you an idea for your own business or a tool you'd like to build, tell me about it. We can start with the problem and work out the next step together.</p>
+    <a class="mt-5 inline-flex rounded-lg bg-ice px-4 py-2.5 font-semibold text-ink hover:bg-white" href="/contact/">Start a conversation</a>
+  </div>
+  <a class="mt-8 inline-block text-ice underline underline-offset-4 hover:text-white" href="https://github.com/Obrien-tg" target="_blank" rel="noopener noreferrer">Browse the full GitHub profile <span aria-hidden="true">↗</span></a>
+</BaseLayout>

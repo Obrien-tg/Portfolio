@@ -2,10 +2,53 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const { title, description } = Astro.props;
+const { title, description, noindex = false } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+const ogImage = new URL('/images/og.png', Astro.site ?? Astro.url);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Obrien TG',
+  description: 'Websites, apps, and digital tools for individuals and small businesses.',
+  url: Astro.site?.toString(),
+  image: ogImage.toString(),
+  founder: { '@type': 'Person', name: 'Obrien Takunda Gwanyanya' },
+  sameAs: ['https://github.com/Obrien-tg', 'https://x.com/Obrien_tg'],
+};
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><link rel="canonical" href={canonicalURL} /><title>{title}</title><meta property="og:type" content="website" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonicalURL} /><meta property="og:site_name" content="Obrien TG" /><meta name="twitter:card" content="summary" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /></head><body>
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-ice focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
-<Header /><main id="main" class="mx-auto w-full max-w-6xl px-5 pb-20 pt-12 md:pt-20"><slot /></main><Footer />
-</body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <title>{title}</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Obrien TG" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-ice focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
+    <Header />
+    <main id="main" class="mx-auto w-full max-w-6xl px-5 pb-20 pt-12 md:pt-20"><slot /></main>
+    <Footer />
+  </body>
+</html>

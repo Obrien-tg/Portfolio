@@ -2,6 +2,8 @@
 
 Personal page and portfolio for Obrien Takunda Gwanyanya.
 
+**Live site:** https://obrien-tg.netlify.app
+
 ## Overview
 
 This site presents:
@@ -44,9 +46,12 @@ the contact form is detected automatically through Netlify Forms.
 
 Run `npm run check` and `npm run build` before publishing.
 
-If port `4173` is already in use, the site may already be running.
-
 ## Routes
 
 `/`, `/about/`, `/work/`, `/services/`, and `/contact/` are static, independently
 routable pages with shared accessible layout and navigation.
+
+
+## Quality checks
+
+GitHub Actions runs `npm run check` and `npm run build` on every push (see `.github/workflows/ci.yml`).

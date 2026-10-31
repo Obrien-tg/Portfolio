@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionIntro from '../../components/SectionIntro.astro';
+---
+<BaseLayout title="Message sent | Obrien TG" description="Thanks for getting in touch." noindex>
+  <SectionIntro eyebrow="Message received" title="Thank you." intro="I've got your message and will reply as soon as I can, usually within two working days." />
+  <div class="mt-8 flex flex-wrap gap-3">
+    <a class="rounded-lg bg-ice px-5 py-3 font-semibold text-ink hover:bg-white" href="/work/">Have a look at my work</a>
+    <a class="rounded-lg border border-slate-600 px-5 py-3 font-semibold text-white hover:border-ice" href="/">Back home</a>
+  </div>
+</BaseLayout>

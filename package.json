@@ -1,5 +1,5 @@
 {
-  "name": "polaris-frontend",
+  "name": "obrien-tg-portfolio",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

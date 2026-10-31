@@ -1,6 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionIntro from '../../components/SectionIntro.astro';
+
+// Paste your free access key from https://web3forms.com below. It is safe to be public:
+// it only routes messages to your inbox and cannot sign in to anything.
+const ACCESS_KEY = 'PASTE_YOUR_WEB3FORMS_KEY_HERE';
+if (import.meta.env.PROD && ACCESS_KEY.startsWith('PASTE_')) {
+  throw new Error('Contact form: add your Web3Forms access key in src/pages/contact/index.astro before building.');
+}
+const thanksUrl = new URL('/contact/thanks/', Astro.site ?? Astro.url).toString();
 ---
 <BaseLayout title="Contact | Obrien TG" description="Have a website, app, or digital-tool idea? Tell Obrien what you're trying to achieve and start a conversation.">
   <SectionIntro eyebrow="Every good build starts somewhere" title="Tell me what you're thinking." intro="You don't need a polished brief or the right technical words. A little context about your idea, your business, or the problem you're trying to solve is plenty to start a conversation."/>
@@ -10,9 +18,12 @@ import SectionIntro from '../../components/SectionIntro.astro';
       <div><h2 class="font-display text-lg font-semibold text-white">Prefer email?</h2><a class="mt-2 inline-block text-ice underline underline-offset-4 hover:text-white" href="mailto:gwanyanyaobrien55@gmail.com">gwanyanyaobrien55@gmail.com</a></div>
       <p class="text-sm italic text-slate-500">Curious by nature. Building for freedom.</p>
     </aside>
-    <form name="contact" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6 rounded-2xl border border-slate-800 bg-panel/70 p-6 sm:p-8">
-      <input type="hidden" name="form-name" value="contact" />
-      <p class="hidden"><label>Don't fill this out <input name="bot-field" /></label></p>
+    <form method="POST" action="https://api.web3forms.com/submit" class="space-y-6 rounded-2xl border border-slate-800 bg-panel/70 p-6 sm:p-8">
+      <input type="hidden" name="access_key" value={ACCESS_KEY} />
+      <input type="hidden" name="subject" value="New enquiry from the portfolio site" />
+      <input type="hidden" name="from_name" value="Portfolio site" />
+      <input type="hidden" name="redirect" value={thanksUrl} />
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
       <div><label class="font-medium text-white" for="name">Your name</label><input required id="name" name="name" autocomplete="name" class="mt-2 w-full rounded-lg border border-slate-700 bg-ink px-4 py-3 text-white" /></div>
       <div><label class="font-medium text-white" for="email">Email address</label><input required type="email" id="email" name="email" autocomplete="email" class="mt-2 w-full rounded-lg border border-slate-700 bg-ink px-4 py-3 text-white" /></div>
       <div><label class="font-medium text-white" for="context">What do you have in mind? <span class="text-slate-500">(optional)</span></label><select id="context" name="project-context" class="mt-2 w-full rounded-lg border border-slate-700 bg-ink px-4 py-3 text-white"><option value="">Choose the closest fit</option><option value="New website">A new website</option><option value="Website improvements">Improve an existing website</option><option value="App or digital tool">An app or digital tool</option><option value="Maintenance or fixes">Maintenance or fixes</option><option value="Not sure yet">I'm still figuring it out</option><option value="Other">Something else</option></select></div>

@@ -1,4 +1,6 @@
-# Polaris — Obrien TG portfolio
+# Obrien TG portfolio
+
+✦ A direction to build toward.
 
 Personal page and portfolio for Obrien Takunda Gwanyanya.
 
@@ -40,9 +42,14 @@ Astro prints the local URL (normally `http://localhost:4321`).
 
 ## Deployment
 
-The included `netlify.toml` configures Netlify to run `npm run build` and publish
-the generated `dist` directory. Connect the repository in Netlify and deploy;
-the contact form is detected automatically through Netlify Forms.
+The site is hosted on Cloudflare (Workers static assets). `wrangler.jsonc` points at the generated `dist` folder, and `public/_headers` sets security headers and caching.
+
+In the Cloudflare dashboard, create a Workers project from this GitHub repository with:
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+
+The contact form posts to [Web3Forms](https://web3forms.com). Put your access key in `src/pages/contact/index.astro`; the build stops with a clear message if it is still the placeholder.
 
 Run `npm run check` and `npm run build` before publishing.
 
